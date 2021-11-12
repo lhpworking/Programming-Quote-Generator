@@ -12,6 +12,9 @@ function getQuote() {
     .then((dataQuote) => {
       quoteAuthor.innerHTML = dataQuote.author;
       quoteDesc.innerHTML = dataQuote.quote;
+    })
+    .catch(function (error) {
+      console.log(error);
     });
 }
 setTimeout(function () {
