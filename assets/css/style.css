@@ -1,0 +1,97 @@
+html {
+    font-size: 100%;
+}
+
+body {
+    margin: 0 auto;
+}
+
+.container {
+    display    : grid;
+    place-items: center;
+    height     : 100vh;
+    background : linear-gradient(90deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+}
+
+.quote-container {
+    position: relative;
+}
+
+.quote-block {
+    position        : relative;
+    background-color: #fff;
+    padding         : 150px 150px 100px 150px;
+    border-radius   : 10px;
+    box-shadow      : 0 16px 20px rgba(238, 174, 202, 1), 0 16px 20px rgba(148, 187, 233, 1);
+    text-align      : center;
+    letter-spacing  : .2px;
+}
+
+.quote-desc {
+    font-size     : 24px;
+    max-width     : 500px;
+    font-weight   : 500;
+    padding-bottom: 20px;
+    line-height   : 40px;
+}
+
+.quote-desc::before {
+    content  : '“ ';
+    font-size: 40px;
+
+}
+
+.quote-desc::after {
+    content  : ' ”';
+    font-size: 40px;
+}
+
+.quote-author {
+    position               : relative;
+    display                : flex;
+    align-items            : center;
+    justify-content        : center;
+    font-size              : 18px;
+    color                  : dimgrey;
+    gap                    : 0 10px;
+    background             : -webkit-linear-gradient(90deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.quote-author::before {
+    content         : "";
+    display         : block;
+    width           : 30px;
+    height          : 1px;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.quote-button {
+    position   : absolute;
+    text-align : center;
+    font-weight: bold;
+    bottom     : 0;
+    left       : 50%;
+    transform  : translate(-50%, 22px);
+}
+
+.btn {
+    padding      : 18px 32px;
+    font-size    : 16px;
+    border       : none;
+    outline      : none;
+    border-radius: 10px;
+}
+
+.btn.btn-primary {
+    color     : #fff;
+    background: linear-gradient(90deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    box-shadow: 0 16px 40px rgb(243, 147, 189), 0 16px 20px rgb(109, 168, 236);
+}
+
+.btn.btn-primary:hover {
+    opacity   : .8;
+    transform : scale(1.1);
+    transition: transform 300ms ease-in-out;
+}
